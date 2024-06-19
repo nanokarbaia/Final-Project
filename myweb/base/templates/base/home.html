@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+
+{%block title%} <title>Home Page</title> {%endblock%}
+
+{% block content %}
+<br>
+<div class="object" style="display:flex;margin:20px;  justify-content: space-between">
+    <h1>The Ultimate Resume Builder</h1>
+    <button type="button" class="btn btn-primary btn-lg">Create Your Resume</button>
+
+</div>
+<hr>
+
+
+
+<div style="display:flex;">
+{% for picture in pictures %}
+
+<div style= "margin: 10px;">
+
+    <img src="{{picture.picture}}"
+    width="180"
+    height="250"/>
+</div>
+
+{% endfor %}
+</div>
+
+{% endblock %}
+
+
